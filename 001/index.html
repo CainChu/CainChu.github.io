@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Demo Web</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <style type="text/css">
+    h1 {
+        color: #3A6DBF;
+        font-size: 36px;
+        background-color: #F0F000;
+    }
+    
+    .pcx2 {
+        position: absolute;
+        left: 0;
+        top: 0px;
+        width: 100%;
+    }
+    
+    #myid {
+        position: relative;
+    }
+    </style>
+    <script type="text/javascript">
+    </script>
+</head>
+
+<body>
+    <h1>你好貓咪</h1>
+    <hr>
+    <div id="pcx1">
+        <button id="bn1">bn1</button>
+        <button id="bn2">bn2</button>
+        <button id="bn3">bn3</button>
+    </div>
+    <div id="myid">
+        <img class="pcx2" id="p1" src="cat1.jpg">
+        <img class="pcx2" id="p2" src="cat2.jpg">
+        <img class="pcx2" id="p3" src="cat3.jpg">
+    </div>
+    <script src="http://127.0.0.1:35729/livereload.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+    var bn1 = $('#bn1');
+    var bn2 = $('#bn2');
+    var bn3 = $('#bn3');
+    var p1 = $('#p1');
+    var p2 = $('#p2');
+    var p3 = $('#p3');
+
+    // bn1.click(clickMe1);
+    bn2.click(clickMe2);
+    bn3.click(clickMe3);
+
+    bn1.click(function() {
+        p1.fadeIn(500);
+        p2.fadeOut(500);
+        p3.fadeOut(500);
+    })
+
+    p2.hide();
+    p3.hide();
+
+    function clickMe2() {
+        p1.fadeOut(500);
+        p2.fadeIn(500);
+        p3.fadeOut(500);
+    }
+
+    function clickMe3() {
+        p1.fadeOut(500);
+        p2.fadeOut(500);
+        p3.fadeIn(500);
+    }
+    </script>
+</body>
+
+</html>

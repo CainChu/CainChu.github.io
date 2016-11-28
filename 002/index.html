@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style type="text/css">
+    #til {
+        font-size: 30px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    
+    #txt {
+        border: 1px solid #000;
+        padding: 40px 20px 20px 20px;
+        line-height: 24px;
+        text-indent: 2em;
+        position: relative;
+        text-align: justify;
+    }
+    
+    #bn {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        text-indent: 0em;
+    }
+    
+    .mouse:hover {
+        cursor: pointer;
+    }
+    
+    .red {
+        color: #f00;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="mouse red" id="til">
+        標題
+    </div>
+    <div id="txt">
+        美國總統當選人川普，選了半天，得罪了一堆人，好不容易選上了，他又嫌白宮房子太小。他說，白宮將是他住過最小的房子。 白宮佔地七萬三千平方公尺，兩萬兩千坪，而川普在佛羅里達州「棕櫚灘」的私宅，佔地兩萬四千坪。他在佛州的家面對大海，四季如夏，旁邊就是他自己擁有的高爾夫球場。 另外，一當上美國總統，川普未來四年就只能坐美國通用出的凱迪拉克或是福特的林肯這兩個牌子的車子。他自己那三十多輛進口名車就只能停在車庫裡蒙塵了。
+        <div class="mouse red" id="bn">關闢</div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+    var til = $('#til');
+    var txt = $('#txt');
+    var bn = $('#bn');
+    til.click(clickTil);
+    bn.click(clickTil);
+
+    function clickTil() {
+        txt.stop().slideToggle(500);
+    }
+    </script>
+</body>
+
+</html>
